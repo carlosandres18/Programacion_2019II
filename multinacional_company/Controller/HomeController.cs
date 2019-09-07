@@ -18,14 +18,14 @@ namespace multinacional_company.controller{
             double precio = double.Parse(reporte.precio);
             double precioT;
 
-            if((reporte.nacionalidad)=="0.30"){
-                if((reporte.categoria)=="0.05"){
+            if((reporte.nacionalidad)=="Extranjera"){
+                if((reporte.categoria)=="Camioneta"){
                     precioT=precio*1.35;
                 }else{
                     precioT=precio*1.33;
                 }
             }else{
-                if((reporte.categoria)=="0.05"){
+                if((reporte.categoria)=="Camioneta"){
                     precioT=precio*1.15;
                 }else{
                     precioT=precio*1.13;
