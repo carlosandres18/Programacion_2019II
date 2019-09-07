@@ -15,8 +15,8 @@ namespace multinacional_company.controller{
         public IActionResult Calculo(reporte reporte){
             Console.WriteLine("Calculo");
 
-            double precio = double.Parse(reporte.precio);
-            double precioT;
+            Double precio = double.Parse(reporte.precio);
+            Double precioT;
 
             if((reporte.nacionalidad)=="Extranjera"){
                 if((reporte.categoria)=="Camioneta"){

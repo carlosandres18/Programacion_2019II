@@ -9,6 +9,6 @@ namespace multinacional_company.models{
         public String categoria {get;set;}
         public String nacionalidad {get;set;}
         public String precio {get;set;}
-        public double precioT {get;set;}
+        public Double precioT {get;set;}
     }
 }
