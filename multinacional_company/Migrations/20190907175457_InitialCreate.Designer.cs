@@ -9,7 +9,7 @@ using multinacional_company.models;
 namespace multinacional_company.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20190907164834_InitialCreate")]
+    [Migration("20190907175457_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
