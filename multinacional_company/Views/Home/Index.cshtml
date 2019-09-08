@@ -1,0 +1,75 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model multinacional_company.models.reporte
+
+<!DOCTYPE html>
+<html>
+    <header>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+    <body>
+        <div class="container" style="margin-top:50px">
+          <div class="row justify-content-center">
+            <div class="col-8" style="border: black 2px dashed">
+              <h1 style="color:#0080ff;text-align:center">Sistema</h1><br>
+              
+              <form asp-controller="Home" asp-action="Calculo">
+                
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label"><strong>Producto:</strong></label>
+                  <div class="col-sm-3">
+                  <input asp-for="producto" placeholder="Nombre completo"/>
+                  </div>
+                </div>
+                
+                <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0"><strong>Categoría:</strong></legend>
+                    <div class="col-sm-3">
+                      <div class="form-check">
+                        <input asp-for="categoria" class="form-check-input" type="radio" value="Camioneta">
+                        <label>Camioneta</label>
+                      </div>
+                      <div class="form-check">
+                        <input asp-for="categoria" class="form-check-input" type="radio" value="Auto">
+                        <label>Auto</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0"><strong>Nacionalidad:</strong></legend>
+                    <div class="col-sm-3">
+                      <div class="form-check">
+                        <input asp-for="nacionalidad" class="form-check-input" type="radio" value="Nacional">
+                        <label>Nacional</label>
+                      </div>
+                      <div class="form-check">
+                        <input asp-for="nacionalidad" class="form-check-input" type="radio" value="Extranjera">
+                        <label>Extranjera</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label"><strong>Precio:</strong></label>
+                  <div class="col-sm-3">
+                  <input asp-for="precio" placeholder="Precio del producto"/>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label"></label>
+                  <div class="col-sm-3">
+                  <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
