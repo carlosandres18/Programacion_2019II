@@ -18,7 +18,7 @@
                 <div class="form-group row">
                   <label class="col-sm-2 col-form-label"><strong>Producto:</strong></label>
                   <div class="col-sm-3">
-                  <input asp-for="producto" placeholder="Nombre completo"/>
+                  <input asp-for="producto" placeholder="Nombre completo" required/>
                   </div>
                 </div>
                 
@@ -27,11 +27,11 @@
                     <legend class="col-form-label col-sm-2 pt-0"><strong>Categoría:</strong></legend>
                     <div class="col-sm-3">
                       <div class="form-check">
-                        <input asp-for="categoria" class="form-check-input" type="radio" value="Camioneta">
+                        <input asp-for="categoria" class="form-check-input" type="radio" value="Camioneta" required>
                         <label>Camioneta</label>
                       </div>
                       <div class="form-check">
-                        <input asp-for="categoria" class="form-check-input" type="radio" value="Auto">
+                        <input asp-for="categoria" class="form-check-input" type="radio" value="Auto" required>
                         <label>Auto</label>
                       </div>
                     </div>
@@ -43,11 +43,11 @@
                     <legend class="col-form-label col-sm-2 pt-0"><strong>Nacionalidad:</strong></legend>
                     <div class="col-sm-3">
                       <div class="form-check">
-                        <input asp-for="nacionalidad" class="form-check-input" type="radio" value="Nacional">
+                        <input asp-for="nacionalidad" class="form-check-input" type="radio" value="Nacional" required>
                         <label>Nacional</label>
                       </div>
                       <div class="form-check">
-                        <input asp-for="nacionalidad" class="form-check-input" type="radio" value="Extranjera">
+                        <input asp-for="nacionalidad" class="form-check-input" type="radio" value="Extranjera" required>
                         <label>Extranjera</label>
                       </div>
                     </div>
@@ -55,9 +55,9 @@
                 </fieldset>
 
                 <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"><strong>Precio:</strong></label>
+                  <label class="col-sm-2 col-form-label"><strong>Precio S/:</strong></label>
                   <div class="col-sm-3">
-                  <input asp-for="precio" placeholder="Precio del producto"/>
+                  <input asp-for="precio" placeholder="Precio del producto" required/>
                   </div>
                 </div>
 

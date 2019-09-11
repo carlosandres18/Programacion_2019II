@@ -9,7 +9,7 @@ using multinacional_company.models;
 namespace multinacional_company.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20190907175457_InitialCreate")]
+    [Migration("20190911051810_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,7 +17,7 @@ namespace multinacional_company.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
-                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             modelBuilder.Entity("multinacional_company.models.reporte", b =>
