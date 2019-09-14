@@ -1,0 +1,36 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model invoice_web_caon.models.reporte
+
+<!DOCTYPE html>
+<html>
+    <header>
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+<body>
+    <h1>Detalle</h1><br>
+   
+    <div>
+        <table>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.cliente)</td>
+                <td>@Html.DisplayTextFor(model => model.cliente)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.producto)</td>
+                <td>@Html.DisplayTextFor(model => model.producto)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.subTotal)</td>
+                <td>@Html.DisplayTextFor(model => model.subTotal)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.total)</td>
+                <td>@Html.DisplayTextFor(model => model.total)</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+</body>
+</html>

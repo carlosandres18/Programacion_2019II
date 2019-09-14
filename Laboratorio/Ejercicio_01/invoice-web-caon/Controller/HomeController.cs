@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using invoice_web_caon.models;
+using System.Linq;
 
 namespace invoice_web_caon.controller{
     public class HomeController:Controller{
@@ -9,7 +10,10 @@ namespace invoice_web_caon.controller{
             _context=context;
         }
         public IActionResult Index(){
-            Console.WriteLine("Index");
+            return View(_context.reportes.ToList());
+        }
+        public IActionResult Create(){
+            Console.WriteLine("Create");
             return View();
         }
         public IActionResult Calculo(reporte reporte){

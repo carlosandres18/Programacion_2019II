@@ -1,5 +1,5 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model invoice_web_caon.models.reporte
+@model IEnumerable<invoice_web_caon.models.reporte>
 
 <!DOCTYPE html>
 <html>
@@ -12,55 +12,33 @@
           <div class="row justify-content-center">
             <div class="col-8" style="border: black 2px dashed">
               <h1 style="color:#0080ff;text-align:center">Invoice</h1><br>
-              <form asp-controller="Home" asp-action="Calculo">
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"><strong>Cliente:</strong></label>
-                  <div class="col-sm-3">
-                  <input asp-for="cliente" placeholder="Nombre completo"/>
-                  </div>
-                </div>
-                
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"><strong>Cantidad:</strong></label>
-                  <div class="col-sm-3">
-                  <input asp-for="cantidad" placeholder="Cantidad producto">
-                  </div>
-                </div>
+              <a asp-action="Create">Create</a>
+              <!-- crear tabla -->
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>
+                      @Html.DisplayNameFor(model => model.cliente)
+                    </th>
+                    <th>
 
-                <fieldset class="form-group">
-                  <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0"><strong>Producto:</strong></legend>
-                    <div class="col-sm-3">
-                      <div class="form-check">
-                        <input asp-for="producto" class="form-check-input" type="radio" value="100">
-                        <label>Producto 1</label>
-                      </div>
-                      <div class="form-check">
-                        <input asp-for="producto" class="form-check-input" type="radio" value="50">
-                        <label>Producto 2</label>
-                      </div>
-                      <div class="form-check">
-                        <input asp-for="producto" class="form-check-input" type="radio" value="80">
-                        <label>Producto 3</label>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"><strong>Fecha:</strong></label>
-                  <div class="col-sm-3">
-                  <input asp-for="Date">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label"></label>
-                  <div class="col-sm-3">
-                  <button type="submit" class="btn btn-primary">REGISTRAR</button>
-                  </div>
-                </div>
-              </form>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach (var item in Model)
+                  {
+                      <tr>
+                        <td>
+                          @Html.DisplayFor(modelItem =>item.cliente)
+                        </td>
+                        <td>
+                          <a asp-action="Details" asp-route-id="@item.id">Details</a>
+                        </td>
+                      </tr>
+                  }
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
