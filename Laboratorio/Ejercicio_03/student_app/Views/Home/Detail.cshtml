@@ -1,0 +1,59 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model student_app.models.student
+
+<!DOCTYPE html>
+<html>
+    <header>
+    <title>Detail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+    <body>
+        <h1>Detalle</h1><br>
+        <div>
+            
+            <table>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayTextFor(model => model.nombre)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.age)
+                    </td>
+                    <td>
+                        @Html.DisplayTextFor(model => model.age)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.hobbie)
+                    </td>
+                    <td>
+                        @Html.DisplayTextFor(model => model.hobbie)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.curso)
+                    </td>
+                    <td>
+                        @Html.DisplayTextFor(model => model.curso)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.credito)
+                    </td>
+                    <td>
+                        @Html.DisplayTextFor(model => model.credito)
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </body>
+</html>

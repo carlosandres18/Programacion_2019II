@@ -5,6 +5,7 @@ namespace student_app.models{
     public class student{
         public int id {get;set;}
         public String nombre {get;set;}
+        public int age {get;set;}
         
         [DataType(DataType.Date)]
         public DateTime birth {get;set;}
