@@ -12,7 +12,7 @@ namespace student_app.models{
 
         public String hobbie {get;set;}
         public String curso {get;set;}
-        public Int credito {get;set;}
-        public Double total {get;set;}
+        public int credito {get;set;}
+        public int total {get;set;}
     }
 }

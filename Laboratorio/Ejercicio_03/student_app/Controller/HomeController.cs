@@ -38,8 +38,8 @@ namespace student_app.controller{
             int age = DateTime.Now.Year - student.birth.Year;
             student.age=age;
             
-            int creditos;
-            int total;
+            int creditos=0;
+            int total=0;
             switch (student.curso){
                 case "Matemática": creditos=4;
                                    total=400;
