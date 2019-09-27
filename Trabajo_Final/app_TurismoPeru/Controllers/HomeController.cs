@@ -14,12 +14,13 @@ namespace app_TurismoPeru.Controllers
         {
             return View();
         }
-
         public IActionResult Nosotros()
         {
-
             return View();
         }
-
+        public IActionResult Form()
+        {
+            return View();
+        }
     }
 }
